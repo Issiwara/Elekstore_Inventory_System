@@ -375,7 +375,7 @@ public class Brands extends javax.swing.JFrame {
             String brandID = txtBrandID.getText();
                 String brandName = txtBrandName.getText();
 
-            String query = "insert into brands(brand_id,brand_title) values("+ brandID +","+ brandName +")";
+            String query = "insert into brands(brand_id,brand_title) values('"+ brandID +"','"+ brandName +"')";
             st = cn.createStatement();
             st.executeUpdate(query);
 
@@ -402,7 +402,7 @@ public class Brands extends javax.swing.JFrame {
         {
 
             try {
-                pst = con.prepareStatement("delete from brands where brand_id ="+id+"?");
+                pst = con.prepareStatement("delete from brands where brand_id ="+"?");
                 pst.setInt(1, id);
                 pst.executeUpdate();
                 JOptionPane.showMessageDialog(null,"Brand Deleted");

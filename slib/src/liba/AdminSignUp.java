@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package liba;
 
 import java.sql.Connection;
@@ -184,23 +180,13 @@ public class AdminSignUp extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"Email Or Password Cannot be Empty");      
         
         }   
-        if (!email.matches("\\w+@\\.\\+")) {
-       
-            JOptionPane.showMessageDialog(null,"Invalid Email address");      
-        
-        }
-        if (password.length() < 8) {
+       else if (password.length() < 8) {
         
             JOptionPane.showMessageDialog(null,"Password must be at least 8 characters");      
         
         }   
-        else if (!password.matches("\\w*\\s+\\w*")) {
-        
-            JOptionPane.showMessageDialog(null,"Password cannot contain space");      
-        
-        }
         else{
-         String query = "insert into admins(user_email,user_pass) values("+email+","+password+")";
+         String query = "insert into admins(user_email,user_pass) values('"+email+"','"+password+"')";
                 st = cn.createStatement();
                 st.executeUpdate(query);
             
