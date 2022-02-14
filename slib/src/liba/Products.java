@@ -222,7 +222,7 @@ return name;
                      
                  }
         } catch (SQLException ex) {
-            Logger.getLogger(author.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Orders.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
@@ -379,7 +379,7 @@ return name;
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(34, 34, 34)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 709, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 809, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -434,7 +434,7 @@ return name;
             .addGroup(layout.createSequentialGroup()
                 .addGap(440, 440, 440)
                 .addComponent(jLabel1)
-                .addContainerGap(494, Short.MAX_VALUE))
+                .addContainerGap(600, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -446,12 +446,12 @@ return name;
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1)
-                .addContainerGap(437, Short.MAX_VALUE))
+                .addContainerGap(645, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(92, 92, 92)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addContainerGap(210, Short.MAX_VALUE)))
         );
 
         pack();
@@ -561,7 +561,7 @@ return name;
 
                 txtcat.requestFocus();
             } catch (SQLException ex) {
-                Logger.getLogger(author.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Orders.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         }

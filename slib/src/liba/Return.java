@@ -388,7 +388,7 @@ public class Return extends javax.swing.JFrame {
           
             
         } catch (SQLException ex) {
-            Logger.getLogger(author.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Orders.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         

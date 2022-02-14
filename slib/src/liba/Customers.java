@@ -322,7 +322,7 @@ PreparedStatement pst;
             txtname.requestFocus();
 
         } catch (SQLException ex) {
-            Logger.getLogger(author.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Orders.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -354,7 +354,7 @@ PreparedStatement pst;
 
                 txtname.requestFocus();
             } catch (SQLException ex) {
-                Logger.getLogger(author.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Orders.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         }
