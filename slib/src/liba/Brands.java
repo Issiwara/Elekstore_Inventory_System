@@ -268,9 +268,9 @@ public class Brands extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
               con = DriverManager.getConnection("jdbc:mysql://localhost/team7db","root","");
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Publisher.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(Publisher.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
         }
            
         
@@ -313,7 +313,7 @@ public class Brands extends javax.swing.JFrame {
             
             
         } catch (SQLException ex) {
-            Logger.getLogger(Publisher.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
         }
     }      
     

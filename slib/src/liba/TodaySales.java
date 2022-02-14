@@ -21,12 +21,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author kobinath
  */
-public class Publisher extends javax.swing.JFrame {
+public class TodaySales extends javax.swing.JFrame {
 
     /**
      * Creates new form category
      */
-    public Publisher() {
+    public TodaySales() {
         initComponents();
         Connect();
         table_update();
@@ -284,9 +284,9 @@ PreparedStatement pst;
             Class.forName("com.mysql.jdbc.Driver");
               con = DriverManager.getConnection("jdbc:mysql://localhost/slibr","root","");
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Publisher.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(Publisher.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
         }
            
         
@@ -331,7 +331,7 @@ PreparedStatement pst;
             
             
         } catch (SQLException ex) {
-            Logger.getLogger(Publisher.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
      
@@ -362,7 +362,7 @@ PreparedStatement pst;
             txtname.requestFocus();
             
         } catch (SQLException ex) {
-            Logger.getLogger(Publisher.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
         }
            
          
@@ -404,7 +404,7 @@ PreparedStatement pst;
 
         } 
         catch (SQLException ex) {
-            Logger.getLogger(Publisher.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -443,7 +443,7 @@ PreparedStatement pst;
                 
                 txtname.requestFocus();
             } catch (SQLException ex) {
-                Logger.getLogger(Publisher.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
             }
               
 
@@ -497,14 +497,18 @@ PreparedStatement pst;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Publisher.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TodaySales.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Publisher.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TodaySales.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Publisher.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TodaySales.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Publisher.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TodaySales.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -513,7 +517,7 @@ PreparedStatement pst;
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Publisher().setVisible(true);
+                new TodaySales().setVisible(true);
             }
         });
     }

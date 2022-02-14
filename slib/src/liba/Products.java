@@ -32,7 +32,7 @@ public class Products extends javax.swing.JFrame {
         
        /* Author();
         Category();
-        Publisher();*/
+        TodaySales();*/
         table_update();
     }
     
@@ -110,9 +110,9 @@ return name;
             Class.forName("com.mysql.jdbc.Driver");
               con = DriverManager.getConnection("jdbc:mysql://localhost/team07","root","");
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Publisher.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(Publisher.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
         }
            
         
@@ -169,7 +169,7 @@ return name;
     }
     
     
-     private void Publisher()
+     private void TodaySales()
     {
 
         try {
