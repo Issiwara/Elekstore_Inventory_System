@@ -28,7 +28,7 @@ public class Main extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnLogout = new javax.swing.JButton();
         btnOrders = new javax.swing.JButton();
         btnBrands = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -36,7 +36,9 @@ public class Main extends javax.swing.JFrame {
         btnDailySales = new javax.swing.JButton();
         btn = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        jToggleButton2 = new javax.swing.JToggleButton();
+        jToggleButton3 = new javax.swing.JToggleButton();
+        jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -45,20 +47,22 @@ public class Main extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 102, 204));
-        jButton1.setText(" Category");
+        jButton1.setText("Categories");
+        jButton1.setIconTextGap(6);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 102, 204));
-        jButton2.setText("Logout");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnLogout.setBackground(new java.awt.Color(255, 255, 255));
+        btnLogout.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        btnLogout.setForeground(new java.awt.Color(0, 102, 204));
+        btnLogout.setText("Logout");
+        btnLogout.setIconTextGap(6);
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnLogoutActionPerformed(evt);
             }
         });
 
@@ -66,6 +70,7 @@ public class Main extends javax.swing.JFrame {
         btnOrders.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btnOrders.setForeground(new java.awt.Color(0, 102, 204));
         btnOrders.setText("Orders");
+        btnOrders.setIconTextGap(6);
         btnOrders.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOrdersActionPerformed(evt);
@@ -76,6 +81,7 @@ public class Main extends javax.swing.JFrame {
         btnBrands.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btnBrands.setForeground(new java.awt.Color(0, 102, 204));
         btnBrands.setText("Brands");
+        btnBrands.setIconTextGap(6);
         btnBrands.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBrandsActionPerformed(evt);
@@ -86,6 +92,7 @@ public class Main extends javax.swing.JFrame {
         jButton5.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jButton5.setForeground(new java.awt.Color(0, 102, 204));
         jButton5.setText("Products");
+        jButton5.setIconTextGap(6);
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -96,6 +103,7 @@ public class Main extends javax.swing.JFrame {
         jButton6.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jButton6.setForeground(new java.awt.Color(0, 102, 204));
         jButton6.setText("Customers");
+        jButton6.setIconTextGap(6);
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -106,6 +114,7 @@ public class Main extends javax.swing.JFrame {
         btnDailySales.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btnDailySales.setForeground(new java.awt.Color(0, 102, 204));
         btnDailySales.setText("Daily Sales");
+        btnDailySales.setIconTextGap(6);
         btnDailySales.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDailySalesActionPerformed(evt);
@@ -115,7 +124,8 @@ public class Main extends javax.swing.JFrame {
         btn.setBackground(new java.awt.Color(255, 255, 255));
         btn.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn.setForeground(new java.awt.Color(0, 102, 204));
-        btn.setText("Return Book");
+        btn.setText("Today Sales");
+        btn.setIconTextGap(6);
         btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnActionPerformed(evt);
@@ -125,23 +135,46 @@ public class Main extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 102, 204));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
-        jToggleButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Elek2.png"))); // NOI18N
+        jToggleButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Elek2.png"))); // NOI18N
+
+        jToggleButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/main.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(168, 168, 168))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(370, 370, 370))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(457, 457, 457))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(jToggleButton1)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jToggleButton2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel3.setBackground(new java.awt.Color(0, 102, 204));
+        jPanel3.setForeground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1141, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 182, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -149,8 +182,9 @@ public class Main extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(185, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnBrands, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -167,14 +201,14 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btn, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(168, 168, 168))
+                        .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(367, 367, 367))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -189,8 +223,9 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(68, 68, 68))
+                    .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -225,13 +260,13 @@ public class Main extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnOrdersActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
         AdminSignUp l = new AdminSignUp();
         this.setVisible(false);
         l.setVisible(true);
         
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
@@ -251,7 +286,7 @@ public class Main extends javax.swing.JFrame {
         
          DailySales c = new DailySales();
           c.setVisible(true);
-        
+        this.hide();
         
     }//GEN-LAST:event_btnDailySalesActionPerformed
 
@@ -303,12 +338,14 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btn;
     private javax.swing.JButton btnBrands;
     private javax.swing.JButton btnDailySales;
+    private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnOrders;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JToggleButton jToggleButton2;
+    private javax.swing.JToggleButton jToggleButton3;
     // End of variables declaration//GEN-END:variables
 }
