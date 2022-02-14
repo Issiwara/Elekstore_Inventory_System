@@ -11,18 +11,20 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-public class Orders extends javax.swing.JFrame {
+public class Today extends javax.swing.JFrame {
 
     /**
      * Creates new form category
      */
-    public Orders() {
+    public Today() {
         initComponents();
         Connect();
         table_update();
@@ -320,9 +322,9 @@ PreparedStatement pst;
             Class.forName("com.mysql.jdbc.Driver");
               con = DriverManager.getConnection("jdbc:mysql://localhost/team7db","root","");
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Orders.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Today.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(Orders.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Today.class.getName()).log(Level.SEVERE, null, ex);
         }
            
         
@@ -337,7 +339,14 @@ PreparedStatement pst;
             int c;
             try {
                
-                 pst = con.prepareStatement("select * from orders");
+                //String today= 
+                        
+                 SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");  
+                 Date date = new Date();
+                String today;
+                today = formatter.format(date);
+                 
+                 pst = con.prepareStatement("select * from orders where order_date ='"+today+"'");
                  ResultSet rs = pst.executeQuery();
                  
                  ResultSetMetaData rsd = rs.getMetaData();
@@ -371,7 +380,7 @@ PreparedStatement pst;
             
             
         } catch (SQLException ex) {
-            Logger.getLogger(Orders.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Today.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
      
@@ -423,7 +432,7 @@ PreparedStatement pst;
             txtOrderID.requestFocus();
             
         } catch (SQLException ex) {
-            Logger.getLogger(Orders.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Today.class.getName()).log(Level.SEVERE, null, ex);
         }
            
          
@@ -444,7 +453,7 @@ PreparedStatement pst;
         {
           
             try {
-                pst = con.prepareStatement("delete from orders where order_id ="+"?");
+                pst = con.prepareStatement("delete from orders where order_id ='"+id+"'");
                   pst.setInt(1, id);
                 pst.executeUpdate();
                 JOptionPane.showMessageDialog(null,"Order Deleted");
@@ -469,7 +478,7 @@ PreparedStatement pst;
                 
                 txtOrderID.requestFocus();
             } catch (SQLException ex) {
-                Logger.getLogger(Orders.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Today.class.getName()).log(Level.SEVERE, null, ex);
             }
               
 
@@ -526,14 +535,18 @@ PreparedStatement pst;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Orders.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Today.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Orders.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Today.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Orders.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Today.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Orders.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Today.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -542,7 +555,7 @@ PreparedStatement pst;
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Orders().setVisible(true);
+                new Today().setVisible(true);
             }
         });
     }
