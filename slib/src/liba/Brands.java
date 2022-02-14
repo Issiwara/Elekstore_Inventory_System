@@ -375,7 +375,7 @@ public class Brands extends javax.swing.JFrame {
             String brandID = txtBrandID.getText();
                 String brandName = txtBrandName.getText();
 
-            String query = "insert into brands values("+ brandID +","+ brandName +")";
+            String query = "insert into brands(brand_id,brand_title) values("+ brandID +","+ brandName +")";
             st = cn.createStatement();
             st.executeUpdate(query);
 
