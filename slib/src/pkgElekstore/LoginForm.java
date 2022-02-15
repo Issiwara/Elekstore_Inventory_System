@@ -64,6 +64,7 @@ public class LoginForm extends javax.swing.JFrame {
 
         btnCancel.setBackground(new java.awt.Color(0, 102, 255));
         btnCancel.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        btnCancel.setForeground(new java.awt.Color(255, 255, 255));
         btnCancel.setText("Cancel");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,6 +74,7 @@ public class LoginForm extends javax.swing.JFrame {
 
         btnLogin.setBackground(new java.awt.Color(0, 102, 255));
         btnLogin.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
