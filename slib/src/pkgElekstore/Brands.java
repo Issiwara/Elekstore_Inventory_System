@@ -56,6 +56,7 @@ public class Brands extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(959, 736));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnCancel.setBackground(new java.awt.Color(0, 102, 204));
@@ -95,7 +96,7 @@ public class Brands extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblBrandData);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 1142, 260));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 1130, 210));
 
         txtBrandID.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         txtBrandID.addActionListener(new java.awt.event.ActionListener() {

@@ -108,7 +108,7 @@ return name;
     {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-              con = DriverManager.getConnection("jdbc:mysql://localhost/team07","root","");
+              con = DriverManager.getConnection("jdbc:mysql://localhost/team7db","root","");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {

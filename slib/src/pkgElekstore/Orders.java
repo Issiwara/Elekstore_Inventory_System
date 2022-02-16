@@ -40,8 +40,6 @@ PreparedStatement pst;
         btnAdd = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
-        txtOrderID = new javax.swing.JTextField();
         txtCustomerID = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -66,6 +64,7 @@ PreparedStatement pst;
 
         tblOrdersData.setBackground(new java.awt.Color(0, 102, 204));
         tblOrdersData.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        tblOrdersData.setForeground(new java.awt.Color(255, 255, 255));
         tblOrdersData.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -120,12 +119,6 @@ PreparedStatement pst;
                 btnCancelActionPerformed(evt);
             }
         });
-
-        jLabel9.setBackground(new java.awt.Color(102, 255, 255));
-        jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel9.setText("Order ID");
-
-        txtOrderID.setBackground(new java.awt.Color(102, 255, 255));
 
         txtCustomerID.setBackground(new java.awt.Color(102, 255, 255));
 
@@ -233,7 +226,6 @@ PreparedStatement pst;
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(424, 424, 424)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel9)
                                     .addComponent(jLabel14)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(10, 10, 10)
@@ -255,9 +247,7 @@ PreparedStatement pst;
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
                                     .addGap(99, 99, 99)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(txtOrderID)
-                                        .addComponent(txtCustomerID, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(txtCustomerID, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -278,11 +268,9 @@ PreparedStatement pst;
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
+                .addGap(69, 69, 69)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtOrderID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtCustomerID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtProductID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -290,8 +278,6 @@ PreparedStatement pst;
                         .addComponent(txtQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(34, 34, 34))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel14)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel15)
@@ -390,7 +376,7 @@ PreparedStatement pst;
 
    
    
-          String orderID = txtOrderID.getText();
+          //String orderID = txtOrderID.getText();
           String customerID = txtCustomerID.getText();
           String productID = txtProductID.getText();
           String quantity = txtQuantity.getText();
@@ -403,9 +389,8 @@ PreparedStatement pst;
       
           
         try {
-            pst = con.prepareStatement(
- "INSERT INTO orders(order_id, customer_id, product_id, qty, trx_id, p_status, order_date) VALUES ('"+orderID+"','"+customerID+"','"+productID+"','"+quantity+"','"+trxID+"','"+status+"','"+orderDate+"')");
-            
+            pst = con.prepareStatement("INSERT INTO orders(customer_id, product_id, qty, trx_id, p_status, order_date) VALUES ('"+customerID+"','"+productID+"','"+quantity+"','"+trxID+"','"+status+"','"+orderDate+"')");
+           /* 
              pst.setString(1, orderID);
              pst.setString(2, customerID);
              pst.setString(3, productID);
@@ -414,13 +399,13 @@ PreparedStatement pst;
              pst.setString(6, status);
              pst.setString(7, orderDate);           
              
-             
+             */
              
             pst.executeUpdate();
             JOptionPane.showMessageDialog(null,"Order added!");
             table_update();
             
-             txtOrderID.setText("");
+           //  txtOrderID.setText("");
              txtCustomerID.setText("");
              txtProductID.setText("");
              txtQuantity.setText("");              
@@ -429,7 +414,7 @@ PreparedStatement pst;
              txtOrderDate.setText("");
             
           
-            txtOrderID.requestFocus();
+            txtTrxID.requestFocus();
             
         } catch (SQLException ex) {
             Logger.getLogger(Orders.class.getName()).log(Level.SEVERE, null, ex);
@@ -460,7 +445,7 @@ PreparedStatement pst;
                 table_update();
                  
              
-             txtOrderID.setText("");
+         //    txtOrderID.setText("");
              txtCustomerID.setText("");
              txtProductID.setText("");
              txtQuantity.setText("");              
@@ -470,13 +455,13 @@ PreparedStatement pst;
           
            
          
-            txtOrderID.requestFocus();
+            txtTrxID.requestFocus();
                 
                 
                 
               
                 
-                txtOrderID.requestFocus();
+                txtTrxID.requestFocus();
             } catch (SQLException ex) {
                 Logger.getLogger(Orders.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -494,7 +479,7 @@ PreparedStatement pst;
         DefaultTableModel d1 = (DefaultTableModel)tblOrdersData.getModel();
         int selectIndex = tblOrdersData.getSelectedRow();
 
-        txtOrderID.setText(d1.getValueAt(selectIndex, 0).toString());
+      //  txtOrderID.setText(d1.getValueAt(selectIndex, 0).toString());
           txtCustomerID.setText(d1.getValueAt(selectIndex, 1).toString());
              txtProductID.setText(d1.getValueAt(selectIndex, 2).toString());
                   txtQuantity.setText(d1.getValueAt(selectIndex, 3).toString());
@@ -569,7 +554,6 @@ PreparedStatement pst;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JToggleButton jToggleButton1;
@@ -577,7 +561,6 @@ PreparedStatement pst;
     private javax.swing.JTable tblOrdersData;
     private javax.swing.JTextField txtCustomerID;
     private javax.swing.JTextField txtOrderDate;
-    private javax.swing.JTextField txtOrderID;
     private javax.swing.JTextField txtProductID;
     private javax.swing.JTextField txtQuantity;
     private javax.swing.JTextField txtStatus;

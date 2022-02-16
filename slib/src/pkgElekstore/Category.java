@@ -35,11 +35,8 @@ PreparedStatement pst;
 
         jPanel2 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         txtcat = new javax.swing.JTextField();
-        txtstatus = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -57,27 +54,13 @@ PreparedStatement pst;
         jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel9.setText("Category");
 
-        jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel10.setText("Status");
-
         txtcat.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-
-        txtstatus.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        txtstatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Active", "DeActive" }));
 
         jButton1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jButton1.setText("Add");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jButton2.setText("Edit");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
             }
         });
 
@@ -95,11 +78,11 @@ PreparedStatement pst;
 
             },
             new String [] {
-                "Id", "Category", "Status"
+                "Id", "Category"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -128,53 +111,33 @@ PreparedStatement pst;
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(43, 43, 43)))
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtcat)
-                            .addComponent(txtstatus, 0, 256, Short.MAX_VALUE)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtcat, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 521, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(60, 60, 60)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtcat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
-                .addGap(27, 27, 27)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtstatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10))
-                .addGap(44, 44, 44)
+                .addGap(33, 33, 33)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -276,10 +239,10 @@ PreparedStatement pst;
      private void table_update()
     {
        
-            int c;
+          int c;
             try {
                
-                 pst = con.prepareStatement("select * from category");
+                 pst = con.prepareStatement("select * from categories");
                  ResultSet rs = pst.executeQuery();
                  
                  ResultSetMetaData rsd = rs.getMetaData();
@@ -294,9 +257,9 @@ PreparedStatement pst;
                      
                      for(int i=1; i<=c; i++)
                      {
-                         v2.add(rs.getString("id"));
-                         v2.add(rs.getString("category"));
-                         v2.add(rs.getString("status"));                         
+                         v2.add(rs.getString("cat_id"));
+                         v2.add(rs.getString("cat_title"));
+                                               
                      }             
                      d.addRow(v2);
                      
@@ -308,7 +271,7 @@ PreparedStatement pst;
             
             
         } catch (SQLException ex) {
-            Logger.getLogger(Category.class.getName()).log(Level.SEVERE, null, ex);
+          //  Logger.getLogger(category.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
      
@@ -316,65 +279,35 @@ PreparedStatement pst;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
 
-        String category = txtcat.getText();
-        String status = txtstatus.getSelectedItem().toString();
+      String category = txtcat.getText();
+        //String status = txtstatus.getSelectedItem().toString();
 
      
       
           
         try {
-            pst = con.prepareStatement("insert into category(category,status)values(?,?) ");
-             pst.setString(1, category);
-            pst.setString(2, status);
+            pst = con.prepareStatement("insert into categories(cat_title)values('"+category+"') ");
+          /*   pst.setString(1, category);
+            pst.setString(2, status);*/
             pst.executeUpdate();
             JOptionPane.showMessageDialog(null,"Category Adddeddd");
             table_update();
             txtcat.setText("");
-            txtstatus.setSelectedIndex(-1);
+          //  txtstatus.setSelectedIndex(-1);
             txtcat.requestFocus();
             
         } catch (SQLException ex) {
-            Logger.getLogger(Category.class.getName()).log(Level.SEVERE, null, ex);
+        //    Logger.getLogger(category.class.getName()).log(Level.SEVERE, null, ex);
         }
            
          
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        DefaultTableModel d1 = (DefaultTableModel)jTable1.getModel();
-        int selectIndex = jTable1.getSelectedRow();
-
-        int id = Integer.parseInt(d1.getValueAt(selectIndex, 0).toString());
-        String category = txtcat.getText();
-        String status = txtstatus.getSelectedItem().toString();
-
-        try {
-           
-            pst = con.prepareStatement("update category set category=?,status=? where id= ?");
-            pst.setString(1, category);
-            pst.setString(2, status);
-            pst.setInt(3, id);
-            pst.executeUpdate();
-            JOptionPane.showMessageDialog(null,"Category Updateddd");
-            table_update();
-            txtcat.setText("");
-            txtstatus.setSelectedIndex(-1);
-            txtcat.requestFocus();
-              jButton1.setEnabled(true);
-
-        } 
-        catch (SQLException ex) {
-            Logger.getLogger(Category.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
 
-        DefaultTableModel d1 = (DefaultTableModel)jTable1.getModel();
+          DefaultTableModel d1 = (DefaultTableModel)jTable1.getModel();
         int selectIndex = jTable1.getSelectedRow();
 
         int id = Integer.parseInt(d1.getValueAt(selectIndex, 0).toString());
@@ -385,16 +318,16 @@ PreparedStatement pst;
         {
           
             try {
-                pst = con.prepareStatement("delete from category where id =?");
+                pst = con.prepareStatement("delete from categories where cat_id =?");
                   pst.setInt(1, id);
                 pst.executeUpdate();
                 JOptionPane.showMessageDialog(null,"Category Deletedd");
                 table_update();
                 txtcat.setText("");
-                txtstatus.setSelectedIndex(-1);
+              //  txtstatus.setSelectedIndex(-1);
                 txtcat.requestFocus();
             } catch (SQLException ex) {
-                Logger.getLogger(Category.class.getName()).log(Level.SEVERE, null, ex);
+              //  Logger.getLogger(category.class.getName()).log(Level.SEVERE, null, ex);
             }
               
 
@@ -411,7 +344,7 @@ PreparedStatement pst;
         int selectIndex = jTable1.getSelectedRow();
 
         txtcat.setText(d1.getValueAt(selectIndex, 1).toString());
-        txtstatus.setSelectedItem(d1.getValueAt(selectIndex, 2).toString());
+    //    txtstatus.setSelectedItem(d1.getValueAt(selectIndex, 2).toString());
         
         jButton1.setEnabled(false);
 
@@ -470,11 +403,9 @@ PreparedStatement pst;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBackToMain;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -482,6 +413,5 @@ PreparedStatement pst;
     private javax.swing.JTable jTable1;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JTextField txtcat;
-    private javax.swing.JComboBox<String> txtstatus;
     // End of variables declaration//GEN-END:variables
 }
