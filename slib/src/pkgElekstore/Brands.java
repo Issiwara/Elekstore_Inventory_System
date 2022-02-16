@@ -53,13 +53,12 @@ public class Brands extends javax.swing.JFrame {
         btnBackToMain = new javax.swing.JButton();
         btnAddBrand = new java.awt.Button();
         btnDelete = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(959, 736));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnCancel.setBackground(new java.awt.Color(0, 102, 204));
+        btnCancel.setBackground(new java.awt.Color(102, 102, 255));
         btnCancel.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btnCancel.setForeground(new java.awt.Color(255, 255, 255));
         btnCancel.setText("Cancel");
@@ -68,7 +67,7 @@ public class Brands extends javax.swing.JFrame {
                 btnCancelActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 860, 300, 70));
+        getContentPane().add(btnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 650, 130, 40));
 
         tblBrandData.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         tblBrandData.setModel(new javax.swing.table.DefaultTableModel(
@@ -96,7 +95,7 @@ public class Brands extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblBrandData);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 1130, 210));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 900, 350));
 
         txtBrandID.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         txtBrandID.addActionListener(new java.awt.event.ActionListener() {
@@ -109,15 +108,15 @@ public class Brands extends javax.swing.JFrame {
                 txtBrandIDKeyPressed(evt);
             }
         });
-        getContentPane().add(txtBrandID, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 610, 194, -1));
+        getContentPane().add(txtBrandID, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 600, 260, -1));
 
         jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel9.setText("Brand ID");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 610, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 600, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel10.setText("Brand Name");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 680, -1, -1));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 600, -1, -1));
 
         txtBrandName.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         txtBrandName.addActionListener(new java.awt.event.ActionListener() {
@@ -130,7 +129,7 @@ public class Brands extends javax.swing.JFrame {
                 txtBrandNameKeyPressed(evt);
             }
         });
-        getContentPane().add(txtBrandName, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 680, 194, -1));
+        getContentPane().add(txtBrandName, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 600, 260, -1));
 
         jPanel2.setBackground(new java.awt.Color(0, 102, 204));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -156,32 +155,30 @@ public class Brands extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(btnBackToMain, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 319, Short.MAX_VALUE)
-                        .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(382, 382, 382))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel3)
-                        .addGap(504, 504, 504))))
+                .addComponent(btnBackToMain, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(220, 220, 220)
+                .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(268, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(395, 395, 395))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBackToMain))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(btnBackToMain)
+                    .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 260));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 940, 230));
 
-        btnAddBrand.setBackground(new java.awt.Color(0, 102, 204));
+        btnAddBrand.setBackground(new java.awt.Color(255, 0, 153));
         btnAddBrand.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btnAddBrand.setForeground(new java.awt.Color(255, 255, 255));
         btnAddBrand.setLabel("Add Brand");
@@ -190,9 +187,9 @@ public class Brands extends javax.swing.JFrame {
                 btnAddBrandActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAddBrand, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 730, 300, 70));
+        getContentPane().add(btnAddBrand, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 650, 130, 40));
 
-        btnDelete.setBackground(new java.awt.Color(0, 102, 204));
+        btnDelete.setBackground(new java.awt.Color(102, 102, 255));
         btnDelete.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btnDelete.setForeground(new java.awt.Color(255, 255, 255));
         btnDelete.setText("Delete");
@@ -201,11 +198,22 @@ public class Brands extends javax.swing.JFrame {
                 btnDeleteActionPerformed(evt);
             }
         });
-        getContentPane().add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 800, 300, 60));
+        getContentPane().add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 650, 130, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/1_wq9OxfN7_h2EripMmOn5xw.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 1150, 540));
+        jPanel1.setBackground(new java.awt.Color(255, 51, 204));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 940, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 760, 940, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -239,9 +247,9 @@ public class Brands extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
               con = DriverManager.getConnection("jdbc:mysql://localhost/team7db","root","");
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
+          //  Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
         }
            
         
@@ -284,7 +292,7 @@ public class Brands extends javax.swing.JFrame {
             
             
         } catch (SQLException ex) {
-            Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
+           // Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
         }
     }      
     
@@ -454,10 +462,10 @@ public class Brands extends javax.swing.JFrame {
     private javax.swing.JButton btnBackToMain;
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnDelete;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JToggleButton jToggleButton3;

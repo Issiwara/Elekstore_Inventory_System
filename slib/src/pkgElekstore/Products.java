@@ -110,9 +110,9 @@ return name;
             Class.forName("com.mysql.jdbc.Driver");
               con = DriverManager.getConnection("jdbc:mysql://localhost/team7db","root","");
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
+           // Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
         }
            
         
@@ -259,7 +259,7 @@ return name;
         btnBackToMain1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(204, 255, 204));
+        setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Product Details", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Century Gothic", 1, 18), new java.awt.Color(0, 51, 255))); // NOI18N
