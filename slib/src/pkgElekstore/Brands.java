@@ -221,7 +221,7 @@ public class Brands extends javax.swing.JFrame {
 
     private void tblBrandDataMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblBrandDataMouseClicked
         
-                                            
+            txtBrandID.setEnabled(false);                                
         // TODO add your handling code here:
 
         DefaultTableModel d1 = (DefaultTableModel)tblBrandData.getModel();
@@ -236,10 +236,6 @@ public class Brands extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_tblBrandDataMouseClicked
-
-    private void txtBrandIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBrandIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtBrandIDActionPerformed
 
       public void Connect()
     {
@@ -297,51 +293,6 @@ public class Brands extends javax.swing.JFrame {
     }      
     
     
-    private void txtBrandIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBrandIDKeyPressed
-        // TODO add your handling code here:
-        /*if(evt.getKeyCode() == KeyEvent.VK_ENTER)
-        {
-            String id = txtBrandID.getText();
-            try {
-                pst = con.prepareStatement("SELECT m.name,b.bookname,l.returndate,DATEDIFF(NOW(),l.returndate) as elap FROM lend l JOIN books b ON l.bookid = b.id JOIN member m ON l.memberid = m.id and  l.memberid = ?");
-                  pst.setString(1, id);
-                ResultSet rs = pst.executeQuery();
-                if(rs.next()==false)
-                {
-                    JOptionPane.showMessageDialog(this,"Member ID not Found");
-                }
-                else
-                {
-                    String mname = rs.getString("m.name");
-                     String bname = rs.getString("b.bookname");
-                      jLabel1.setText(mname.trim());
-                     jLabel2.setText(bname.trim());                 
-                      String date = rs.getString("l.returndate");  
-                       String elp = rs.getString("elap");
-                      
-                      int elaped = Integer.parseInt(elp);     
-                      if(elaped > 0)
-                      {                 
-                          txtelp.setText(elp);  
-                          int fine = elaped * 50; 
-                          txtfine.setText(String.valueOf(fine));      
-                      }
-                      else
-                      {
-                          txtelp.setText("0");
-                          txtfine.setText("0"); 
-                      }
-                      txtdate.setText(date.trim());
-                }
-            } catch (SQLException ex) {
-                Logger.getLogger(Brands.class.getName()).log(Level.SEVERE, null, ex);
-            }
-              
-         
-
-        }*/
-    }//GEN-LAST:event_txtBrandIDKeyPressed
-
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
         // TODO add your handling code here:
        this.setVisible(false);
@@ -366,17 +317,17 @@ public class Brands extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
             cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/team7db","root","");
 
-            String brandID = txtBrandID.getText();
+         //   String brandID = txtBrandID.getText();
                 String brandName = txtBrandName.getText();
 
-            String query = "insert into brands(brand_id,brand_title) values('"+ brandID +"','"+ brandName +"')";
+            String query = "insert into brands(brand_title) values('"+ brandName +"')";
             st = cn.createStatement();
             st.executeUpdate(query);
 
             JOptionPane.showMessageDialog(null, "Brand Added");
-            new Main().setVisible(true);
-            this.setVisible(false);
-
+            table_update();
+            //this.setVisible(false);
+             
         } catch (Exception ex) {
             System.out.println(ex);
         }
@@ -401,7 +352,7 @@ public class Brands extends javax.swing.JFrame {
                 pst.executeUpdate();
                 JOptionPane.showMessageDialog(null,"Brand Deleted");
                 table_update();
-                txtBrandID.setText("");
+                //txtBrandID.setText("");
                 txtBrandName.setText("");
                 
                 txtBrandName.requestFocus();
@@ -421,6 +372,54 @@ public class Brands extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnBackToMainActionPerformed
 
+    private void txtBrandIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBrandIDKeyPressed
+        // TODO add your handling code here:
+        /*if(evt.getKeyCode() == KeyEvent.VK_ENTER)
+        {
+            String id = txtBrandID.getText();
+            try {
+                pst = con.prepareStatement("SELECT m.name,b.bookname,l.returndate,DATEDIFF(NOW(),l.returndate) as elap FROM lend l JOIN books b ON l.bookid = b.id JOIN member m ON l.memberid = m.id and  l.memberid = ?");
+                pst.setString(1, id);
+                ResultSet rs = pst.executeQuery();
+                if(rs.next()==false)
+                {
+                    JOptionPane.showMessageDialog(this,"Member ID not Found");
+                }
+                else
+                {
+                    String mname = rs.getString("m.name");
+                    String bname = rs.getString("b.bookname");
+                    jLabel1.setText(mname.trim());
+                    jLabel2.setText(bname.trim());
+                    String date = rs.getString("l.returndate");
+                    String elp = rs.getString("elap");
+
+                    int elaped = Integer.parseInt(elp);
+                    if(elaped > 0)
+                    {
+                        txtelp.setText(elp);
+                        int fine = elaped * 50;
+                        txtfine.setText(String.valueOf(fine));
+                    }
+                    else
+                    {
+                        txtelp.setText("0");
+                        txtfine.setText("0");
+                    }
+                    txtdate.setText(date.trim());
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(Brands.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        }*/
+    }//GEN-LAST:event_txtBrandIDKeyPressed
+
+    private void txtBrandIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBrandIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtBrandIDActionPerformed
+
+    
     /**
      * @param args the command line arguments
      */
@@ -453,6 +452,7 @@ public class Brands extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Brands().setVisible(true);
+                
             }
         });
     }
