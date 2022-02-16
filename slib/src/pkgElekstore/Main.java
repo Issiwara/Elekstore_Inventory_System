@@ -225,7 +225,8 @@ public class Main extends javax.swing.JFrame {
 
     private void btnCategoriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCategoriesActionPerformed
                
-        Category cat = new Category();
+       // Category cat = new Category();
+       Category cat = new Category();
         this.hide();
         cat.setVisible(true);
         
