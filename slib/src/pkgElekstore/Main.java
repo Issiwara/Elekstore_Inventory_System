@@ -191,18 +191,19 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBrandsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBrandsActionPerformed
-        
+          this.hide();
           Brands b = new Brands();
         b.setVisible(true);
+        
         
         
     }//GEN-LAST:event_btnBrandsActionPerformed
 
     private void btnCategoriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCategoriesActionPerformed
                
-       
+         this.hide();
        Category cat = new Category();
-        this.hide();
+      
         cat.setVisible(true);
         
         
@@ -210,7 +211,8 @@ public class Main extends javax.swing.JFrame {
 
     private void btnOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrdersActionPerformed
        
-          Orders c = new Orders();
+         this.hide(); 
+        Orders c = new Orders();
         c.setVisible(true);
         
         
@@ -219,32 +221,34 @@ public class Main extends javax.swing.JFrame {
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
+          this.hide();
         LoginForm l = new LoginForm();
-        this.hide();
         l.setVisible(true);
         
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+          this.hide();
           Products c = new Products();
         c.setVisible(true);
-        this.hide();
+    
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-          Customers c = new Customers();
+          this.hide(); 
+        Customers c = new Customers();
           c.setVisible(true);
         
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void btnDailySalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDailySalesActionPerformed
         // TODO add your handling code here:
-        
+          this.hide();
          DailySales c = new DailySales();
           c.setVisible(true);
-        this.hide();
+        
         
     }//GEN-LAST:event_btnDailySalesActionPerformed
 

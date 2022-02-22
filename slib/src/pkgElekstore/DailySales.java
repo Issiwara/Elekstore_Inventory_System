@@ -350,7 +350,7 @@ return name;
                 pst = con.prepareStatement("delete from orders where order_id ="+"?");
                 pst.setInt(1, id);
                 pst.executeUpdate();
-                JOptionPane.showMessageDialog(null,"Customer Deleted");
+                JOptionPane.showMessageDialog(null,"Order Deleted");
                 table_update();
                
             } catch (SQLException ex) {
