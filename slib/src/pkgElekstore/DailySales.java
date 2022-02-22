@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pkgElekstore;
 
 import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
@@ -20,21 +16,14 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author kobinath
- */
 public class DailySales extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Book
-     */
+    
     public DailySales() {
         initComponents();
         Connect();
         
-   //     Book();
-       
+         
        // table_update2(date);
     }
      Connection con;

@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pkgElekstore;
 
 import java.sql.Connection;
@@ -284,7 +280,7 @@ PreparedStatement pst;
      
      
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        // TODO add your handling code here:
+        
 
       String category = txtcat.getText();
         //String status = txtstatus.getSelectedItem().toString();

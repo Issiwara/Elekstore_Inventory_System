@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pkgElekstore;
 
 import java.sql.Connection;
@@ -17,15 +13,10 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author kobinath
- */
+
 public class Customers extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Member
-     */
+    
     public Customers() {
         initComponents();
         Connect();
@@ -40,9 +31,9 @@ PreparedStatement pst;
             Class.forName("com.mysql.jdbc.Driver");
               con = DriverManager.getConnection("jdbc:mysql://localhost/team7db","root","");
         } catch (ClassNotFoundException ex) {
-          //  Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
+           // Logger.getLogger(DailySales.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-           // Logger.getLogger(TodaySales.class.getName()).log(Level.SEVERE, null, ex);
+           // Logger.getLogger(DailySales.class.getName()).log(Level.SEVERE, null, ex);
         }
            
         

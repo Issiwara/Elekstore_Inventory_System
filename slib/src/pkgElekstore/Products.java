@@ -17,22 +17,14 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author kobinath
- */
+
 public class Products extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Book
-     */
-    public Products() {
+      public Products() {
         initComponents();
         Connect();
         
-       /* Author();
-        Category();
-        TodaySales();*/
+      
         table_update();
     }
     
