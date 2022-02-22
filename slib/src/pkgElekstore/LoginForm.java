@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pkgElekstore;
 
 import java.sql.Connection;
@@ -26,15 +22,9 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author kobinath
- */
 public class LoginForm extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Login
-     */
+  
     public LoginForm() {
         initComponents();
     }

@@ -19,15 +19,10 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author kobinath
- */
+
 public class Brands extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Return
-     */
+    
     public Brands() {
         initComponents();
          Connect();
