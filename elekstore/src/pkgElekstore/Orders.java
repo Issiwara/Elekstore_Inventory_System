@@ -56,6 +56,11 @@ PreparedStatement pst;
         jToggleButton1.setText("jToggleButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
 
         tblOrdersData.setBackground(new java.awt.Color(0, 102, 204));
         tblOrdersData.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -509,6 +514,11 @@ PreparedStatement pst;
         // TODO add your handling code here:
         btnBackToMain.setBackground(Color.red);
     }//GEN-LAST:event_btnBackToMainMousePressed
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        // TODO add your handling code here:
+        btnDelete.setEnabled(false);
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
