@@ -1,6 +1,8 @@
 
 package pkgElekstore;
 
+import java.awt.Color;
+
 
 public class Main extends javax.swing.JFrame {
 
@@ -38,6 +40,23 @@ public class Main extends javax.swing.JFrame {
         btnCategories.setForeground(new java.awt.Color(255, 255, 255));
         btnCategories.setText("Categories");
         btnCategories.setIconTextGap(6);
+        btnCategories.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCategoriesMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnCategoriesMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnCategoriesMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnCategoriesMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btnCategoriesMouseReleased(evt);
+            }
+        });
         btnCategories.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCategoriesActionPerformed(evt);
@@ -50,6 +69,11 @@ public class Main extends javax.swing.JFrame {
         btnOrders.setForeground(new java.awt.Color(255, 255, 255));
         btnOrders.setText("Orders");
         btnOrders.setIconTextGap(6);
+        btnOrders.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnOrdersMousePressed(evt);
+            }
+        });
         btnOrders.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOrdersActionPerformed(evt);
@@ -62,6 +86,11 @@ public class Main extends javax.swing.JFrame {
         btnBrands.setForeground(new java.awt.Color(255, 255, 255));
         btnBrands.setText("Brands");
         btnBrands.setIconTextGap(6);
+        btnBrands.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnBrandsMousePressed(evt);
+            }
+        });
         btnBrands.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBrandsActionPerformed(evt);
@@ -74,6 +103,11 @@ public class Main extends javax.swing.JFrame {
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Products");
         jButton5.setIconTextGap(6);
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton5MousePressed(evt);
+            }
+        });
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -86,6 +120,11 @@ public class Main extends javax.swing.JFrame {
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Customers");
         jButton6.setIconTextGap(6);
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton6MousePressed(evt);
+            }
+        });
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -98,6 +137,11 @@ public class Main extends javax.swing.JFrame {
         btnDailySales.setForeground(new java.awt.Color(255, 255, 255));
         btnDailySales.setText("Daily Sales");
         btnDailySales.setIconTextGap(6);
+        btnDailySales.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnDailySalesMousePressed(evt);
+            }
+        });
         btnDailySales.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDailySalesActionPerformed(evt);
@@ -125,6 +169,11 @@ public class Main extends javax.swing.JFrame {
         btnLogout.setForeground(new java.awt.Color(255, 255, 255));
         btnLogout.setText("Logout");
         btnLogout.setIconTextGap(6);
+        btnLogout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnLogoutMousePressed(evt);
+            }
+        });
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogoutActionPerformed(evt);
@@ -219,7 +268,7 @@ public class Main extends javax.swing.JFrame {
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
-          this.hide();
+        this.hide();
         LoginForm l = new LoginForm();
         l.setVisible(true);
         
@@ -249,6 +298,57 @@ public class Main extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_btnDailySalesActionPerformed
+
+    private void btnCategoriesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCategoriesMouseExited
+        // TODO add your handling code here:
+       // btnCategories.setBackground(Color.BLUE);
+    }//GEN-LAST:event_btnCategoriesMouseExited
+
+    private void btnCategoriesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCategoriesMouseEntered
+        // TODO add your handling code here:
+        // btnCategories.setBackground(Color.PINK);
+    }//GEN-LAST:event_btnCategoriesMouseEntered
+
+    private void btnCategoriesMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCategoriesMouseReleased
+        // TODO add your handling code here:
+        //btnCategories.setBackground(Color.RED);
+        //[112,72,251]
+    }//GEN-LAST:event_btnCategoriesMouseReleased
+
+    private void btnCategoriesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCategoriesMouseClicked
+        // TODO add your handling code here:
+       //  btnCategories.setBackground(Color.RED);
+    }//GEN-LAST:event_btnCategoriesMouseClicked
+
+    private void btnCategoriesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCategoriesMousePressed
+        // TODO add your handling code here:
+         btnCategories.setBackground(Color.RED);
+    }//GEN-LAST:event_btnCategoriesMousePressed
+
+    private void btnOrdersMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOrdersMousePressed
+ btnOrders.setBackground(Color.RED);        // TODO add your handling code here:
+    }//GEN-LAST:event_btnOrdersMousePressed
+
+    private void btnBrandsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBrandsMousePressed
+ btnBrands.setBackground(Color.RED);        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBrandsMousePressed
+
+    private void btnDailySalesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDailySalesMousePressed
+ btnDailySales.setBackground(Color.RED);        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDailySalesMousePressed
+
+    private void jButton5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MousePressed
+ jButton5.setBackground(Color.RED);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5MousePressed
+
+    private void jButton6MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MousePressed
+ jButton6.setBackground(Color.RED);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6MousePressed
+
+    private void btnLogoutMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLogoutMousePressed
+        // TODO add your handling code here:
+        btnLogout.setBackground(Color.red);
+    }//GEN-LAST:event_btnLogoutMousePressed
 
     /**
      * @param args the command line arguments

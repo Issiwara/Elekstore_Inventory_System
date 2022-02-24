@@ -1,6 +1,7 @@
 
 package pkgElekstore;
 
+import java.awt.Color;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -147,6 +148,11 @@ PreparedStatement pst;
         btnBackToMain.setBackground(new java.awt.Color(255, 255, 255));
         btnBackToMain.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btnBackToMain.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back.png"))); // NOI18N
+        btnBackToMain.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnBackToMainMousePressed(evt);
+            }
+        });
         btnBackToMain.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackToMainActionPerformed(evt);
@@ -489,6 +495,8 @@ PreparedStatement pst;
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
         // TODO add your handling code here:
           this.setVisible(false);
+          Main main =new Main();
+        main.setVisible(true);
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnBackToMainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackToMainActionPerformed
@@ -496,6 +504,11 @@ PreparedStatement pst;
         main.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnBackToMainActionPerformed
+
+    private void btnBackToMainMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackToMainMousePressed
+        // TODO add your handling code here:
+        btnBackToMain.setBackground(Color.red);
+    }//GEN-LAST:event_btnBackToMainMousePressed
 
     /**
      * @param args the command line arguments

@@ -5,6 +5,7 @@
  */
 package pkgElekstore;
 
+import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -138,6 +139,11 @@ public class Brands extends javax.swing.JFrame {
         btnBackToMain.setBackground(new java.awt.Color(255, 255, 255));
         btnBackToMain.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btnBackToMain.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back.png"))); // NOI18N
+        btnBackToMain.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnBackToMainMousePressed(evt);
+            }
+        });
         btnBackToMain.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackToMainActionPerformed(evt);
@@ -291,6 +297,8 @@ public class Brands extends javax.swing.JFrame {
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
         // TODO add your handling code here:
        this.setVisible(false);
+       Main main =new Main();
+        main.setVisible(true);
         
     }//GEN-LAST:event_btnCancelActionPerformed
 
@@ -374,6 +382,10 @@ public class Brands extends javax.swing.JFrame {
     private void txtBrandIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBrandIDActionPerformed
        
     }//GEN-LAST:event_txtBrandIDActionPerformed
+
+    private void btnBackToMainMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackToMainMousePressed
+      btnBackToMain.setBackground(Color.red);        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBackToMainMousePressed
 
     
     /**
