@@ -25,6 +25,8 @@ public class Brands extends javax.swing.JFrame {
 
     
     public Brands() {
+        
+
         initComponents();
          Connect();
          table_update();
@@ -54,9 +56,9 @@ public class Brands extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnCancel.setBackground(new java.awt.Color(102, 102, 255));
+        btnCancel.setBackground(new java.awt.Color(102, 102, 250));
         btnCancel.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        btnCancel.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancel.setForeground(new java.awt.Color(255, 255, 250));
         btnCancel.setText("Cancel");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,8 +129,8 @@ public class Brands extends javax.swing.JFrame {
         });
         getContentPane().add(txtBrandName, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 600, 260, -1));
 
-        jPanel2.setBackground(new java.awt.Color(0, 102, 204));
-        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(0, 102, 250));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 250));
 
         jToggleButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Elek2.png"))); // NOI18N
 
