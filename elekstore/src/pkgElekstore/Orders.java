@@ -26,7 +26,7 @@ Connection con;
 PreparedStatement pst;
    
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+   
     private void initComponents() {
 
         jToggleButton1 = new javax.swing.JToggleButton();
@@ -44,6 +44,7 @@ PreparedStatement pst;
         txtStatus = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jToggleButton3 = new javax.swing.JToggleButton();
+        
         jLabel1 = new javax.swing.JLabel();
         btnBackToMain = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
@@ -51,6 +52,7 @@ PreparedStatement pst;
         txtProductID = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         txtTrxID = new javax.swing.JTextField();
+        
         txtOrderDate = new javax.swing.JTextField();
 
         jToggleButton1.setText("jToggleButton1");
@@ -70,7 +72,7 @@ PreparedStatement pst;
 
             },
             new String [] {
-                "Order ID", "Customer ID", "Product ID", "Quantity", "Transaction ID", "Status", "Order Date"
+                "Order ID","Customer ID", "Product ID", "Quantity", "Transaction ID", "Status", "Order Date"
             }
         ) {
             Class[] types = new Class [] {
@@ -82,7 +84,7 @@ PreparedStatement pst;
             }
         });
         tblOrdersData.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        tblOrdersData.setGridColor(new java.awt.Color(255, 255, 255));
+        tblOrdersData.setGridColor(new java.awt.Color(255, 255, 250));
         tblOrdersData.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblOrdersDataMouseClicked(evt);
@@ -90,9 +92,9 @@ PreparedStatement pst;
         });
         jScrollPane1.setViewportView(tblOrdersData);
 
-        btnAdd.setBackground(new java.awt.Color(0, 102, 204));
+        btnAdd.setBackground(new java.awt.Color(0, 102, 255));
         btnAdd.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        btnAdd.setForeground(new java.awt.Color(255, 255, 255));
+        btnAdd.setForeground(new java.awt.Color(255, 255, 250));
         btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,7 +102,7 @@ PreparedStatement pst;
             }
         });
 
-        btnDelete.setBackground(new java.awt.Color(0, 102, 204));
+        btnDelete.setBackground(new java.awt.Color(0, 102, 180));
         btnDelete.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btnDelete.setForeground(new java.awt.Color(255, 255, 255));
         btnDelete.setText("Delete");
